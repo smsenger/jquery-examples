@@ -10,9 +10,21 @@
     When the save button is clicked, take the text value inside the text field, and append a new <li> element to the #log with the entered text value.
     HINT: lookup .val()
     */
-    $(function () {
-      // write your code here
+
+
+    $(document).ready(function () {     //don't need document ready, can just have $(function(){}).
+    $('#clear-button').click(function () { //can store these as $variables
+      $('#text-field').val("");
+    }); 
+    $('#save-button').click(function() {
+      let $list = $('<li>', {             //could also do const new value = $('#text-field').val()
+        'text': $('#text-field').val()  //can use template strings to append html straight in
+      }) 
+        $('#log').append($list);
+      })
     });
+
+
     </script>
   </head>
   <body>

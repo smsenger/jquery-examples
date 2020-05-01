@@ -8,6 +8,13 @@
     /*
     When the button is clicked, change the text of the paragraph #the-message to "You clicked me!", and the text of the button #the-button to "Click again?".
     */
+
+    $(document).ready(function () {
+    $('#the-button').click(function () {
+      $('#the-message').html("You clicked me!");  //can also use keyword "text"
+      $('#the-button').html("Click again?");      //can also save button, message as $variables. better if they're getting used again.
+    });
+  });
     </script>
   </head>
   <body>
